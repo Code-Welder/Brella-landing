@@ -1,0 +1,30 @@
+.overview {
+  &__left-side {
+    display: flex;
+    justify-content: center;
+  }
+
+  @include media-md{
+    &__left-side {
+      order: 2;
+
+      img {
+        width: 35%;
+        height: auto;
+      }
+    }
+
+    &__right-side {
+      order: 1;
+      margin-bottom: 20px;
+    }
+  }
+
+  @include media-xs{
+    &__left-side {
+      img {
+        width: 60%;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import '_normalize';
+@import '_variables';
+@import 'mixins/media';
+@import '_global';
+/*! purgecss start ignore */
+@import './vendors/splide-core.min';
+/*! purgecss end ignore */
+@import '_header';
+@import '_burger-menu';
+@import '_section';
+@import '_section-advantages';
+@import '_section-features';
+@import '_section-customization';
+@import '_section-benefits';
+@import '_section-overview';
+@import '_section-employers';
+@import '_section-backed-by';
+@import '_section-blog';
+@import '_section-invite';
+@import '_footer';
+@import '_slider';
+
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn {
+  background: $green;
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logo-svg {
+  width: 75px;
+  height: 22px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin: .5em;
+}
+
+.socials {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    &--linkedin {
+      background-image: url('../assets/img/sprite.svg#linkedin');
+    }
+
+    &--twitter {
+      background-image: url('../assets/img/sprite.svg#twitter');
+    }
+
+    &--youtube {
+      background-image: url('../assets/img/sprite.svg#youtube');
+    }
+  }
+}

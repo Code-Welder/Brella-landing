@@ -1,0 +1,45 @@
+.slider {
+  position: relative;
+  padding: 0 70px;
+  display: flex;
+  justify-content: center;
+
+  &__arrow {
+    position: absolute;
+    top: calc(50% - 9px);
+    width: 24px;
+    height: 18px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(2px);
+    }
+
+    &:active {
+      transform: none;
+    }
+  }
+
+  &__arrow--prev {
+    left: 0;
+    background-image: url('../assets/img/sprite.svg#arrow-left');
+  }
+
+  &__arrow--next {
+    right: 0;
+    background-image: url('../assets/img/sprite.svg#arrow-right');
+  }
+
+  @include media-md{
+    padding: 0;
+
+    &__arrow {
+      display: none;
+    }
+  }
+}
